@@ -3,63 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .hero {
-            background-color: #f8f9fa;
-            padding: 100px 0;
-            text-align: center;
-        }
-    </style>
+    <title>Your Name - Public Policy & Economics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">My Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">About</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to My Website</h1>
-            <p>A space to showcase my work and ideas.</p>
-        </div>
-    </section>
-    
-    <section id="about" class="container py-5">
-        <h2>About Me</h2>
-        <p>This is where you can introduce yourself.</p>
-    </section>
-    
-    <section id="projects" class="container py-5">
-        <h2>My Projects</h2>
-        <p>Showcase your work here.</p>
-    </section>
-    
-    <section id="contact" class="container py-5">
-        <h2>Contact</h2>
-        <p>Provide ways for people to reach you.</p>
-    </section>
-    
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2025 My Website. All rights reserved.</p>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Your Name</h1>
+                <p class="subtitle fade-in-delay">Public Policy • Economics • Research</p>
+                <div class="hero-bio fade-in-delay-2">
+                    <p>
+                        I am a policy researcher and economist with expertise in [your focus areas]. 
+                        I hold a Master of Public Policy from Georgetown University, where I developed 
+                        a foundation in quantitative analysis and evidence-based policymaking.
+                    </p>
+                    <p>
+                        My work focuses on [describe your research interests and current work]. 
+                        I combine rigorous economic analysis with practical policy insights to address 
+                        [the problems you care about].
+                    </p>
+                    <p>
+                        Currently, I am [your current position/affiliation or what you're working on].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests">
+            <h2>Research Interests</h2>
+            <div class="interest-grid">
+                <div class="interest-card">
+                    <h3>Policy Analysis</h3>
+                    <p>Description of your policy analysis work and interests.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Economic Research</h3>
+                    <p>Description of your economic research focus.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Data Science</h3>
+                    <p>R programming, statistical analysis, and visualization.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

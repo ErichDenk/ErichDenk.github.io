@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="writing.html" class="active">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h1 class="fade-in">Writing</h1>
+            <p class="subtitle fade-in-delay">Essays, reflections, and commentary on policy and economics</p>
+
+            <ul class="blog-list fade-in-delay-2">
+                <!-- Example blog post - duplicate and modify as needed -->
+                <li class="blog-item">
+                    <div class="blog-date">January 2026</div>
+                    <h2 class="blog-title">
+                        <a href="posts/example-post.html">Title of Your First Blog Post</a>
+                    </h2>
+                    <p class="blog-excerpt">
+                        A brief excerpt or summary of your blog post that gives readers a preview 
+                        of what they'll find. This should be engaging and informative, drawing 
+                        them in to read more.
+                    </p>
+                </li>
+
+                <li class="blog-item">
+                    <div class="blog-date">December 2025</div>
+                    <h2 class="blog-title">
+                        <a href="posts/example-post-2.html">Reflections on Economic Policy</a>
+                    </h2>
+                    <p class="blog-excerpt">
+                        Another engaging excerpt that summarizes the key points or themes of this 
+                        post. Keep it concise but compelling.
+                    </p>
+                </li>
+
+                <li class="blog-item">
+                    <div class="blog-date">November 2025</div>
+                    <h2 class="blog-title">
+                        <a href="posts/example-post-3.html">Data Visualization in Policy Research</a>
+                    </h2>
+                    <p class="blog-excerpt">
+                        A summary of your thoughts on using data visualization to communicate 
+                        research findings to policymakers and the public.
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

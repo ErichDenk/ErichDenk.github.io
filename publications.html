@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h1 class="fade-in">Publications</h1>
+            <p class="subtitle fade-in-delay">Research papers, policy briefs, and academic work</p>
+
+            <ul class="publication-list fade-in-delay-2">
+                <!-- Example publication - duplicate and modify as needed -->
+                <li class="publication-item">
+                    <div class="pub-title">Title of Your Publication or Working Paper</div>
+                    <div class="pub-authors">Your Name, Co-Author Name</div>
+                    <div class="pub-venue">Journal Name or Working Paper Series, Year</div>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">PDF</a>
+                        <a href="#" class="pub-link">Abstract</a>
+                        <a href="#" class="pub-link">Code</a>
+                    </div>
+                </li>
+
+                <li class="publication-item">
+                    <div class="pub-title">Another Research Paper Title</div>
+                    <div class="pub-authors">Your Name</div>
+                    <div class="pub-venue">Policy Brief Series, Organization Name, Year</div>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">PDF</a>
+                        <a href="#" class="pub-link">Summary</a>
+                    </div>
+                </li>
+
+                <li class="publication-item">
+                    <div class="pub-title">Economic Analysis of Policy Topic</div>
+                    <div class="pub-authors">Your Name, Co-Author 1, Co-Author 2</div>
+                    <div class="pub-venue">Working Paper, Year</div>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">PDF</a>
+                        <a href="#" class="pub-link">Slides</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Works in Progress</h2>
+            <ul class="publication-list">
+                <li class="publication-item">
+                    <div class="pub-title">Title of Work in Progress</div>
+                    <div class="pub-authors">Your Name</div>
+                    <div class="pub-description">
+                        Brief description of the project and its current status.
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

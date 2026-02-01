@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html" class="active">CV</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h1 class="fade-in">Curriculum Vitae</h1>
+            <p class="subtitle fade-in-delay">
+                <a href="#" class="pub-link" style="font-size: 1.1rem;">Download PDF</a>
+            </p>
+        </section>
+
+        <section class="cv-section fade-in-delay-2">
+            <h2>Education</h2>
+            <div class="cv-item">
+                <h3>Master of Public Policy</h3>
+                <div class="cv-meta">Georgetown University | Year</div>
+                <div class="cv-description">
+                    Concentration in [your concentration]. Relevant coursework: [list key courses].
+                </div>
+            </div>
+            <div class="cv-item">
+                <h3>Bachelor of Arts in Economics</h3>
+                <div class="cv-meta">University Name | Year</div>
+                <div class="cv-description">
+                    Additional details about your undergraduate education.
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Professional Experience</h2>
+            <div class="cv-item">
+                <h3>Position Title</h3>
+                <div class="cv-meta">Organization Name | Start Date – End Date (or Present)</div>
+                <div class="cv-description">
+                    <ul>
+                        <li>Key responsibility or achievement</li>
+                        <li>Another important contribution</li>
+                        <li>Relevant project or analysis</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cv-item">
+                <h3>Previous Position</h3>
+                <div class="cv-meta">Organization Name | Start Date – End Date</div>
+                <div class="cv-description">
+                    <ul>
+                        <li>Major accomplishment or responsibility</li>
+                        <li>Another key contribution</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Research Experience</h2>
+            <div class="cv-item">
+                <h3>Research Project or Role</h3>
+                <div class="cv-meta">Institution or Lab | Dates</div>
+                <div class="cv-description">
+                    Description of research work, methodologies used, and outcomes.
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Skills</h2>
+            <div class="cv-description">
+                <p><strong>Programming & Data Analysis:</strong> R (advanced), Python (developing), Stata, SQL</p>
+                <p><strong>Statistical Methods:</strong> Econometrics, causal inference, regression analysis, experimental design</p>
+                <p><strong>Tools:</strong> Git, LaTeX, Tableau, Excel</p>
+                <p><strong>Languages:</strong> English (native), [other languages]</p>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Awards & Honors</h2>
+            <div class="cv-item">
+                <h3>Award Name</h3>
+                <div class="cv-meta">Granting Organization | Year</div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Service & Leadership</h2>
+            <div class="cv-item">
+                <h3>Role or Position</h3>
+                <div class="cv-meta">Organization | Dates</div>
+                <div class="cv-description">
+                    Brief description of your role and contributions.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
