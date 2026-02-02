@@ -19,6 +19,7 @@
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="writing.html">Writing</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button></li>
             </ul>
         </div>
     </nav>
@@ -90,14 +91,6 @@
                 </li>
 
                 <li class="publication-item">
-                    <div class="pub-title">National Priorities for Artificial Intelligence</div>
-                    <div class="pub-authors">Mathematica Inc.</div>
-                    <div class="pub-venue">Response to the Request for Information, 2023</div>
-                    <div class="pub-links">
-                        <a href="https://www.mathematica.org/-/media/publications/pdfs/data-analytics/2023/ai-request-for-info-final.pdf" class="pub-link">PDF</a>
-                    </div>
-
-                <li class="publication-item">
                     <div class="pub-title">Declining Industrial Disruption</div>
                     <div class="pub-authors">James E. Bessen, Erich Denk, Joowon Kim, Cesare Righi</div>
                     <div class="pub-venue">Boston University School of Law, Law & Economics Research Paper Series No. 20-28, 2020</div>
@@ -140,6 +133,33 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        (function() {
+            const storageKey = 'theme';
+            const root = document.documentElement;
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+            function getTheme() { return localStorage.getItem(storageKey) || (prefersDark.matches ? 'dark' : 'light'); }
+            function applyTheme(theme) {
+                if (theme === 'dark') root.setAttribute('data-theme', 'dark'); else root.removeAttribute('data-theme');
+                localStorage.setItem(storageKey, theme);
+                updateToggle();
+            }
+            function updateToggle() {
+                const btn = document.querySelector('.theme-toggle');
+                if (!btn) return;
+                const theme = getTheme();
+                btn.setAttribute('aria-pressed', theme === 'dark');
+                btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+            }
+            document.addEventListener('click', (e) => {
+                if (e.target && e.target.classList.contains('theme-toggle')) {
+                    applyTheme(getTheme() === 'dark' ? 'light' : 'dark');
+                }
+            });
+            prefersDark.addEventListener('change', (e) => {
+                if (!localStorage.getItem(storageKey)) applyTheme(e.matches ? 'dark' : 'light');
+            });
+            applyTheme(getTheme());
+        })();
     </script>
 </body>
 </html>
