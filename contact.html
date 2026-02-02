@@ -19,6 +19,7 @@
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="writing.html">Writing</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button></li>
             </ul>
         </div>
     </nav>
@@ -58,6 +59,15 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        (function(){
+            const k='theme', root=document.documentElement, mq=window.matchMedia('(prefers-color-scheme: dark)');
+            const get=()=>localStorage.getItem(k)|| (mq.matches?'dark':'light');
+            const apply=t=>{ t==='dark'?root.setAttribute('data-theme','dark'):root.removeAttribute('data-theme'); localStorage.setItem(k,t); upd(); };
+            const upd=()=>{ const b=document.querySelector('.theme-toggle'); if(!b) return; const t=get(); b.setAttribute('aria-pressed', t==='dark'); b.textContent=t==='dark'?'Light mode':'Dark mode'; };
+            document.addEventListener('click',e=>{ if(e.target&&e.target.classList.contains('theme-toggle')) apply(get()==='dark'?'light':'dark'); });
+            mq.addEventListener('change',e=>{ if(!localStorage.getItem(k)) apply(e.matches?'dark':'light');});
+            apply(get());
+        })();
     </script>
 </body>
 </html>

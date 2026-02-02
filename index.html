@@ -20,6 +20,7 @@
                 <li><a href="writing.html">Writing</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark mode</button></li>
             </ul>
         </div>
     </nav>
@@ -79,6 +80,40 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        (function() {
+            const storageKey = 'theme';
+            const root = document.documentElement;
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+            function getTheme() {
+                return localStorage.getItem(storageKey) || (prefersDark.matches ? 'dark' : 'light');
+            }
+            function applyTheme(theme) {
+                if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+                else root.removeAttribute('data-theme');
+                localStorage.setItem(storageKey, theme);
+                updateToggle();
+            }
+            function updateToggle() {
+                const btn = document.querySelector('.theme-toggle');
+                if (!btn) return;
+                const theme = getTheme();
+                btn.setAttribute('aria-pressed', theme === 'dark');
+                btn.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+            }
+            document.addEventListener('click', (e) => {
+                if (e.target && e.target.classList.contains('theme-toggle')) {
+                    const next = getTheme() === 'dark' ? 'light' : 'dark';
+                    applyTheme(next);
+                }
+            });
+            prefersDark.addEventListener('change', (e) => {
+                if (!localStorage.getItem(storageKey)) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+            applyTheme(getTheme());
+        })();
     </script>
 </body>
 </html>

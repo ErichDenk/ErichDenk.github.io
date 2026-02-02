@@ -11,6 +11,17 @@
     --sans: 'IBM Plex Sans', sans-serif;
 }
 
+[data-theme="dark"] {
+    --text-primary: #e6e6e6;
+    --text-secondary: #c7c7c7;
+    --text-muted: #a1a1a1;
+    --bg-primary: #0f1115;
+    --bg-secondary: #161a22;
+    --accent: #8ab4f8;
+    --accent-light: #a6c8ff;
+    --border: #2a2f3a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +45,10 @@ body {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .main-nav {
+    background-color: rgba(15, 17, 21, 0.92);
 }
 
 .nav-container {
@@ -89,6 +103,23 @@ body {
 .nav-links a:hover::after,
 .nav-links a.active::after {
     width: 100%;
+}
+
+/* Theme toggle */
+.nav-links .theme-toggle {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.nav-links .theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* Container */
